@@ -1,0 +1,28 @@
+<form method="post">
+  <h3>Edit {{report.yearQuarter}} report of {{company.name}}</h3>
+  <div>
+    <a href="{{report.url}}" rel="noopener noreferrer" target="_blank">Report URL</a>
+  </div>
+  <hr />
+  <div>
+    <label for="revenue">Revenue</label>
+    <input id="revenue" name="revenue" step="1" type="number" value="{{report.revenue}}" />
+    {{#ifeq error.param 'revenue'}}<span style="color: red">{{error.msg}}</span>{{/ifeq}}
+  </div>
+  <div>
+    <label for="grossProfit">Gross Profit</label>
+    <input id="grossProfit" name="grossProfit" step="1" type="number" value="{{report.grossProfit}}" />
+    {{#ifeq error.param 'grossProfit'}}<span style="color: red">{{error.msg}}</span>{{/ifeq}}
+  </div>
+  <div>
+    <label for="operatingProfit">Operating Profit</label>
+    <input id="operatingProfit" name="operatingProfit" step="1" type="number" value="{{report.operatingProfit}}" />
+    {{#ifeq error.param 'operatingProfit'}}<span style="color: red">{{error.msg}}</span>{{/ifeq}}
+  </div>
+  <div>
+    <label for="netIncome">Net Income</label>
+    <input id="netIncome" name="netIncome" step="1" type="number" value="{{report.netIncome}}" />
+    {{#ifeq error.param 'netIncome'}}<span style="color: red">{{error.msg}}</span>{{/ifeq}}
+  </div>
+  <button>Submit</button>
+</form>
